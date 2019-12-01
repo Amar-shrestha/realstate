@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <!-- Custom -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+
+  <title>BT Real Estate</title>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    {% include 'partials/_topbar.html' %}
+    <!-- Navbar -->
+    {% include 'partials/_navbar.html' %}
+    <!-- Main Content -->
+    {% block content %}{% endblock %}
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+
+    <!-- Place this where you need payment button -->
+<!--    <button id="payment-button">Pay with Khalti</button>-->
+    <!-- Place this where you need payment button -->
+    <!-- Paste this code anywhere in you body tag -->
+<!--    <script>-->
+<!--        var config = {-->
+<!--            // replace the publicKey with yours-->
+<!--            "publicKey": "test_public_key_dc74e0fd57cb46cd93832aee0a390234",-->
+<!--            "productIdentity": "1234567890",-->
+<!--            "productName": "Dragon",-->
+<!--            "productUrl": "http://gameofthrones.wikia.com/wiki/Dragons",-->
+<!--            "eventHandler": {-->
+<!--                onSuccess (payload) {-->
+<!--                    // hit merchant api for initiating verfication-->
+<!--                    console.log(payload);-->
+<!--                },-->
+<!--                onError (error) {-->
+<!--                    console.log(error);-->
+<!--                },-->
+<!--                onClose () {-->
+<!--                    console.log('widget is closing');-->
+<!--                }-->
+<!--            }-->
+<!--        };-->
+
+<!--        var checkout = new KhaltiCheckout(config);-->
+<!--        var btn = document.getElementById("payment-button");-->
+<!--        btn.onclick = function () {-->
+<!--            checkout.show({amount: 1000});-->
+<!--        }-->
+<!--    </script>-->
+  <script src="{%static 'js/jquery-3.3.1.min.js ' %}"></script>
+  <script src="{%static 'js/bootstrap.bundle.min.js' %} "></script>
+  <script src="{%static 'js/main.js' %} "></script>
+<!--    <script src="https://khalti.com/static/khalti-checkout.js"></script>-->
+</body>
+
+</html>
