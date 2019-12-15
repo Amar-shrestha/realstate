@@ -3,7 +3,6 @@ from listings.models import Listing
 from realtors.models import Realtor
 
 
-
 class ListingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Listing
@@ -15,15 +14,7 @@ class ListingSerializer(serializers.ModelSerializer):
         # 	raise serializers.ValidationError('error detected')
 
 
-
 class RealtorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Realtor
         fields = ('name', 'photo', 'description', 'phone', 'email', 'is_mvp', 'hire_date')
-
-
-
-
-
-
-        
